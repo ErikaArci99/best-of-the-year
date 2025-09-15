@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best of the year</title>
+    <title>Best Songs</title>
 </head>
 
 <body>
-    <h1 th:text="'Best of the year by ' + ${name}"></h1>
-    <p><a th:href="@{/movies}">Vai ai film</a></p>
-    <p><a th:href="@{/songs}">Vai alle canzoni</a></p>
+    <h1>Migliori Canzoni</h1>
+    <ul>
+        <li th:each="song : ${list}" th:text="${song}"></li>
+    </ul>
+    <p><a th:href="@{/}">Torna alla home</a></p>
 </body>
 
 </html>
