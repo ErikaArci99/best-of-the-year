@@ -10,9 +10,16 @@
 </head>
 
 <body>
-    <h1 th:text="'Best of the year by ' + ${name}"></h1>
-    <p><a th:href="@{/movies}">Vai ai film</a></p>
-    <p><a th:href="@{/songs}">Vai alle canzoni</a></p>
+    <div th:replace="fragments :: navbar"></div>
+
+    <div class="container text-center">
+        <h1 th:text="'Best of the year by ' + ${name}"></h1>
+        <div class="my-4">
+            <img src="https://picsum.photos/400/300" class="img-fluid rounded shadow">
+        </div>
+        <p>Ciò che mi ha tenuto compagnia nel 2024.</p>
+    </div>
+
 </body>
 
 </html>

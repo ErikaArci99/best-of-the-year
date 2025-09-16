@@ -10,10 +10,19 @@
 </head>
 
 <body>
-    <h1>Canzone selezionata</h1>
-    <p th:text="${title}"></p>
-    <p><a th:href="@{/songs}">Torna alle canzoni</a></p>
-    <p><a th:href="@{/}">Torna alla home</a></p>
+    <div th:replace="fragments :: navbar"></div>
+
+    <div class="container text-center mt-5">
+        <h2>Song Detail</h2>
+
+        <div class="card mx-auto mt-3" style="max-width: 400px;">
+            <div class="card-body">
+                <h4 class="card-title" th:text="${title}"></h4>
+            </div>
+        </div>
+
+        <a th:href="@{/songs}" class="btn btn-secondary mt-3">Torna alle canzoni</a>
+    </div>
 </body>
 
 </html>
