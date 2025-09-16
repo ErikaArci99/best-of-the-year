@@ -36,16 +36,16 @@ public class HomeController {
                 new Song("Shape of You", 3));
     }
 
-    // Metodi pubblici
+    // Metodi pubblici: restituiscono liste di oggetti
     @GetMapping("/movies")
     public String movies(Model model) {
-        model.addAttribute("list", getBestMovies());
+        model.addAttribute("movies", getBestMovies()); // lista di oggetti Movie
         return "movies";
     }
 
     @GetMapping("/songs")
     public String songs(Model model) {
-        model.addAttribute("list", getBestSongs());
+        model.addAttribute("songs", getBestSongs()); // lista di oggetti Song
         return "songs";
     }
 

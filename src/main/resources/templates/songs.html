@@ -11,8 +11,8 @@
 
 <body>
     <h1>Migliori Canzoni</h1>
-    <ul>
-        <li th:each="song : ${list}" th:text="${song}"></li>
+    <ul class="list-group mt-3">
+        <li th:each="song : ${songs}" class="list-group-item" th:text="${song.songTitle}"></li>
     </ul>
     <p><a th:href="@{/}">Torna alla home</a></p>
 </body>

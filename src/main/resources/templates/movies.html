@@ -11,8 +11,8 @@
 
 <body>
     <h1>Migliori Film</h1>
-    <ul>
-        <li th:each="movie : ${list}" th:text="${movie}"></li>
+    <ul class="list-group mt-3">
+        <li th:each="movie : ${movies}" class="list-group-item" th:text="${movie.movieTitle}"></li>
     </ul>
     <p><a th:href="@{/}">Torna alla home</a></p>
 </body>
